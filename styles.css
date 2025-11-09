@@ -1,0 +1,78 @@
+:root{
+  --brand:#5b7cfa;
+  --brand-600:#536ee6;
+  --brand-700:#3f54be;
+  --ink:#0f172a;
+  --muted:#6b7280;
+  --bg-soft:#f8fafc;
+}
+
+html,body{ height:100%; }
+body{
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  background: var(--bg-soft);
+  color: var(--ink);
+}
+
+.app-hero{
+  background: radial-gradient(1200px 300px at 10% -10%, #e8eeff, transparent),
+              radial-gradient(800px 250px at 90% -20%, #eaf6ff, transparent),
+              white;
+}
+
+.brand-mark{ color: var(--brand); }
+
+.search-card .input-group .form-control:focus{
+  box-shadow: none;
+  border-color: var(--brand);
+}
+
+/* Service card */
+.service-card{
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  border: 1px solid #eef2ff;
+}
+.service-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.06);
+  border-color: #e0e7ff;
+}
+
+.service-icon{
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  background: #eef2ff;
+  font-size: 20px;
+}
+.service-icon-lg{
+  width: 56px; height: 56px;
+  display: grid; place-items: center;
+  border-radius: 14px;
+  background: #eef2ff;
+  font-size: 28px;
+}
+
+.badge-soft{
+  background: #eef2ff; color: #3730a3;
+  border: 1px solid #e0e7ff;
+}
+
+.btn-primary{
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand-600);
+  --bs-btn-hover-border-color: var(--brand-600);
+  --bs-btn-active-bg: var(--brand-700);
+  --bs-btn-active-border-color: var(--brand-700);
+}
+
+/* Empty state */
+.empty-state{
+  border: 1px dashed #cbd5e1;
+  background: linear-gradient(0deg, rgba(255,255,255,.6), rgba(255,255,255,.6)), repeating-linear-gradient(45deg, #f8fafc, #f8fafc 10px, #f1f5f9 10px, #f1f5f9 20px);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .service-card{ transition: none; }
+}
